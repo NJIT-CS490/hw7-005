@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
     </head>
-    <body>
+    <body onload="drawPotato()">
         <div class="topnav">
           <a class="active" href="#home">Home</a>
           <a href="#about">About</a>
@@ -23,5 +23,18 @@
             <li>Potato Pierogi</li>
             <li>Mashed Potatoes</li>
         </ol>
+        <div id='potatoContainer'>
+            {% for i in range(numPotatoes) %}
+                <img src={{ url_for('static', filename='potato.png') }} 
+                width={{ potatoes[i].size }} height={{ potatoes[i].size }}
+                style="
+                    opacity: {{ potatoes[i].opacity }}; 
+                    top: {{ potatoes[i].position.y }}; 
+                    left: {{ potatoes[i].position.x }};
+                    transform: rotate({{ potatoes[i].rotation}});
+                "
+                class='potatoImage' />
+            {% endfor %}
+        </div>
     </body>
 </html>
