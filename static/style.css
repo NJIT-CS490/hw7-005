@@ -10,3 +10,20 @@ body {
     padding-bottom: 5em;
     padding-left: 1em;
 }
+
+.box {
+    font-family: "Helvetica Neue Light", sans-serif;
+    color: darkslategray;
+    font-size: 14;
+    background-color: lightblue;
+    width: 500px;
+    min-height: 150px;
+	margin: 0 auto;
+	padding: 1em;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 25%;
+    margin-left: -200px;
+}
