@@ -1,8 +1,0 @@
-Hammmad - Adding a cool font and background color to style.css
-
-1.) Make sure flask is installed: try running [sudo] pip install flask
-2.) If flask is installed the only thing needed to run this application should be to run the main.py file and then in AWS C9 hit preview -> preview running application.
-
-
-
-Credit to "eNiGMa the MoNKey" in https://www.albinoblacksheep.com/flash/taters
