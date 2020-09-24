@@ -66,7 +66,12 @@ def createPotatoes(numPotatoes):
         currPotato['rotation'] = f'{random.randint(0, 360)}deg'
         potatoes.append(currPotato)
     return potatoes
-
+# My code between here and
+@app.route('/history')
+def history():
+    #makes a new webpage
+    return flask.render_template("history.html")
+#here
 @app.route('/about')
 def about():
     # Choose a random number of potatoes and generate them
