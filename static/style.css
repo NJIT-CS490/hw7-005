@@ -73,3 +73,8 @@ img {
     width: 200px;
     height: auto;
 }
+
+ol {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
