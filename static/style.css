@@ -78,7 +78,7 @@ img {
 }
 
 .foodImage {
-    width: 200px;
+    width: 250px;
     height: auto;
 }
 
@@ -88,6 +88,7 @@ img {
 
 ol {
     display: grid;
+    grid-gap: 50px;
     grid-template-columns: repeat(5, 1fr);
 }
 
