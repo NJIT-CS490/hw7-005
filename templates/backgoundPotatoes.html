@@ -1,0 +1,15 @@
+<div id='potatoContainer'>
+    {% if numPotatoes is defined and potatoes is defined %}
+        {% for i in range(numPotatoes) %}
+            <img src={{ url_for('static', filename='potato.png') }} 
+            width={{ potatoes[i].size }} height={{ potatoes[i].size }}
+            style="
+                opacity: {{ potatoes[i].opacity }}; 
+                top: {{ potatoes[i].position.y }}; 
+                left: {{ potatoes[i].position.x }};
+                transform: rotate({{ potatoes[i].rotation}});
+            "
+            class='potatoImage' />
+        {% endfor %}
+    {% endif %}
+</div>
