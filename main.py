@@ -84,6 +84,11 @@ def about():
         numPotatoes=numPotatoes,
     )
     
+#ascii_potato
+@app.route('/potato')
+def potato():
+    return flask.render_template("ascii.html")
+    
 app.run(
     debug=True,
     port=int(os.getenv('PORT', 8080)),
