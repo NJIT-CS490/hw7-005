@@ -68,3 +68,8 @@ img {
 .potatoImage {
     position:absolute;
 }
+
+.foodImage {
+    width: 200px;
+    height: auto;
+}
