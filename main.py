@@ -69,7 +69,14 @@ def createPotatoes(numPotatoes):
 
 @app.route('/about')
 def about():
-    return flask.render_template("about.html")
+    # Choose a random number of potatoes and generate them
+    numPotatoes = random.randint(30, 40)
+    potatoes = createPotatoes(numPotatoes)
+    return flask.render_template(
+        "about.html",
+        potatoes=potatoes,
+        numPotatoes=numPotatoes,
+    )
     
 app.run(
     debug=True,
