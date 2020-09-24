@@ -12,7 +12,7 @@
         10 Things you can create with <i>potato</i>:
         <ol>
             {% for i in range(foods_length) %}
-                <li>{{foods[i]}}<br><img src={{ url_for('static', filename='{{food_imgs[i]}}') }} ></li>
+                <li>{{foods[i]}}<br><img src={{ url_for('static', filename=food_imgs[i]) }} ></li>
             {% endfor %}
         </ol>
         <div id='potatoContainer'>

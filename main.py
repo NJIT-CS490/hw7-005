@@ -18,6 +18,20 @@ foods = [
     "Mashed Potatoes"
 ]
 
+# list of images to display with each food
+food_imgs = [
+    "hashbrowns.jpg",
+    "tater.jpg",
+    "fries.jpg",
+    "waffle.jpg",
+    "baked.jpg",
+    "soup.jpg",
+    "scallop.jpg",
+    "chips.jpg",
+    "pierogi.jpg",
+    "mashed.jpg",
+]
+
 @app.route('/') # Python decorator
 def index():
     # Choose a random number of potatoes and generate them
@@ -28,6 +42,7 @@ def index():
         numPotatoes=numPotatoes,
         potatoes=potatoes,
         foods=foods,
+        food_imgs=food_imgs,
         foods_length=len(foods)
     )
     
