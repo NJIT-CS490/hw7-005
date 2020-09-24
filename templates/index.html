@@ -11,17 +11,9 @@
         
         10 Things you can create with <i>potato</i>:
         <ol>
-
-            <li>Hash Browns<br><img src={{ url_for('static', filename='hashbrowns.jpg') }} ></li>
-            <li>Tater Tots<br><img src={{ url_for('static', filename='tater.jpg') }} ></li>
-            <li>French Fries<br><img src={{ url_for('static', filename='fries.jpg') }} ></li>
-            <li>Waffle fries<br><img src={{ url_for('static', filename='waffle.jpg') }} ></li>
-            <li>Baked Potato<br><img src={{ url_for('static', filename='baked.jpg') }} ></li>
-            <li>Potato Soup<br><img src={{ url_for('static', filename='soup.jpg') }} ></li>
-            <li>Scalloped Potatoes<br><img src={{ url_for('static', filename='scallop.jpg') }} ></li>
-            <li>Potato Chips<br><img src={{ url_for('static', filename='chips.jpg') }} ></li>
-            <li>Potato Pierogi<br><img src={{ url_for('static', filename='pierogi.jpg') }} ></li>
-            <li>Mashed Potatoes<br><img src={{ url_for('static', filename='mashed.jpg') }} ></li>
+            {% for i in range(foods_length) %}
+                <li>{{foods[i]}}<br><img src={{ url_for('static', filename='{{food_imgs[i]}}') }} ></li>
+            {% endfor %}
         </ol>
         <div id='potatoContainer'>
             {% for i in range(numPotatoes) %}
