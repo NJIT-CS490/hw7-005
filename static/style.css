@@ -11,6 +11,10 @@ body {
     padding-left: 1em;
 }
 
+img {
+    max-width: 200px;
+    height: auto;
+}
 .box {
     font-family: "Helvetica Neue Light", sans-serif;
     color: darkslategray;
