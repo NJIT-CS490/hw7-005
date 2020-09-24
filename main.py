@@ -4,6 +4,34 @@ import random
 
 app = flask.Flask(__name__)
 
+# list of foods to display on webpage
+foods = [
+    "Hash Browns",
+    "Tater Tots",
+    "French Fries",
+    "Waffle Fries",
+    "Baked Potato",
+    "Potato Soup",
+    "Scalloped Potatoes",
+    "Potato Chips",
+    "Potato Pierogi",
+    "Mashed Potatoes"
+]
+
+# list of images to display with each food
+food_imgs = [
+    "hashbrowns.jpg",
+    "tater.jpg",
+    "fries.jpg",
+    "waffle.jpg",
+    "baked.jpg",
+    "soup.jpg",
+    "scallop.jpg",
+    "chips.jpg",
+    "pierogi.jpg",
+    "mashed.jpg",
+]
+
 @app.route('/') # Python decorator
 def index():
     # Choose a random number of potatoes and generate them
@@ -13,6 +41,9 @@ def index():
         "index.html",
         numPotatoes=numPotatoes,
         potatoes=potatoes,
+        foods=foods,
+        food_imgs=food_imgs,
+        foods_length=len(foods)
     )
     
 def createPotatoes(numPotatoes):
