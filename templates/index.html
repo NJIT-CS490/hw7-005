@@ -12,16 +12,9 @@
         
         10 Things you can create with <i>potato</i>:
         <ol>
-            <li>Hash Browns</li>
-            <li>Tater Tots</li>
-            <li>French Fries</li>
-            <li>Waffle fries</li>
-            <li>Baked Potato</li>
-            <li>Potato Soup</li>
-            <li>Scalloped Potatoes</li>
-            <li>Potato Chips</li>
-            <li>Potato Pierogi</li>
-            <li>Mashed Potatoes</li>
+            {% for i in range(foods_length) %}
+                <li>{{ foods[i] }}</li>
+            {% endfor %}
         </ol>
         <div id='potatoContainer'>
             {% for i in range(numPotatoes) %}
