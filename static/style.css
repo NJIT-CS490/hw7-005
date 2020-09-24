@@ -92,6 +92,13 @@ ol {
     grid-template-columns: repeat(5, 1fr);
 }
 
+li {
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Fredoka One";
+}
+
 a{
     
     color:white;
