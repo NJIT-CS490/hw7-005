@@ -66,6 +66,10 @@ def createPotatoes(numPotatoes):
         currPotato['rotation'] = f'{random.randint(0, 360)}deg'
         potatoes.append(currPotato)
     return potatoes
+
+@app.route('/about')
+def about():
+    return flask.render_template("about.html")
     
 app.run(
     debug=True,
