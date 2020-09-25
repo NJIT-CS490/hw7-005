@@ -1,0 +1,53 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href={{ url_for('static', filename='style.css') }} />
+        <style>
+            h1{
+                text-align: center;
+            }
+            ol, li{
+                font-family: 'Bowlby One SC', cursive;
+                color: steelblue;
+                font-size: 36;
+                text-align: left;
+                display: block;
+                
+            }
+            .plabel {
+                height: auto; 
+                width: auto; 
+                max-width: 15%; 
+                max-height: 15%;
+                float: left;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+          <a class="active" href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/history">History</a>
+          <a href="/potato">potato</a>
+          <a href="/facts">Facts</a>
+        </div>
+        <h1>Nutrional Facts About Potatoes</h1>
+        <img class="plabel" src={{ url_for('static', filename="nutrition.jpg") }}>
+        <ol>
+            <li>
+                Potatoes are the No. 1 vegetable crop in the United States
+            </li>
+            <li>
+                Only about 110 calories
+            </li>
+            <li>
+                45 percent of the recommended daily value of vitamin C
+            </li>
+            <li>
+                Can be healthy depending on cooking methods
+            </li>
+        </ol>
+        <a href=""></a>
+        <p>Please eat potatoes responsibly</p>
+    </body>
+</html>
