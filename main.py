@@ -88,6 +88,10 @@ def about():
 def potato():
     return flask.render_template("ascii.html")
     
+@app.route('/facts')
+def nutrition():
+    return flask.render_template("nutrition.html")
+    
 app.run(
     debug=True,
     port=int(os.getenv('PORT', 8080)),
