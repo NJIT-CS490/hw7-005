@@ -54,6 +54,7 @@ def createPotatoes(numPotatoes):
     
     # Position/size/opacity are measured in percentages, while rotation
     # is measured in degrees
+    
     potatoes = []
     for i in range(numPotatoes):
         currPotato = {}
