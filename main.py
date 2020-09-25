@@ -67,11 +67,19 @@ def createPotatoes(numPotatoes):
         currPotato['rotation'] = f'{random.randint(0, 360)}deg'
         potatoes.append(currPotato)
     return potatoes
+    
 # Code that runs the HTML webpage
 @app.route('/history')
 def history():
+    # Choose a random number of potatoes and generate them
+    numPotatoes = random.randint(1, 10)
+    potatoes = createPotatoes(numPotatoes)
     #makes a new webpage
-    return flask.render_template("history.html")
+    return flask.render_template(
+        "history.html",
+        potatoes=potatoes,
+        numPotatoes=numPotatoes,
+    )
     
 @app.route('/about')
 def about():
@@ -87,11 +95,25 @@ def about():
 #ascii_potato
 @app.route('/potato')
 def potato():
-    return flask.render_template("ascii.html")
+    # Choose a random number of potatoes and generate them
+    numPotatoes = random.randint(40, 50)
+    potatoes = createPotatoes(numPotatoes)
+    return flask.render_template(
+        "ascii.html",
+        potatoes=potatoes,
+        numPotatoes=numPotatoes,
+    )
     
 @app.route('/facts')
 def nutrition():
-    return flask.render_template("nutrition.html")
+    # Choose a random number of potatoes and generate them
+    numPotatoes = random.randint(50, 60)
+    potatoes = createPotatoes(numPotatoes)
+    return flask.render_template(
+        "nutrition.html",
+        potatoes=potatoes,
+        numPotatoes=numPotatoes,
+    )
     
 app.run(
     debug=True,
